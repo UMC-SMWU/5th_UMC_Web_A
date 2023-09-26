@@ -1,0 +1,82 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F5e7d7daf-2be7-4c50-9b93-216549b3e561%2F5d87f741-86bf-41c3-afe0-1cc1627eb8bc%2FUMC_%25EB%25AD%2594%25EA%25B0%2580_%25EA%25B0%2584%25EC%25A7%2580%25EB%2582%2598%25EB%258A%2594_%25EB%25B0%25B0%25EA%25B2%25BD1_2.svg?table=block&id=f452eacf-a05d-4625-9db6-063e43cc1a91&spaceId=5e7d7daf-2be7-4c50-9b93-216549b3e561&userId=e537e835-caec-4180-9ac6-732f109045ee&cache=v2");
+	background-size: cover;
+	height: 100vh;
+	width: auto;
+	margin: 0px;
+}
+
+h1 {
+	font-weight: 700;
+	width: 300px;
+	border-bottom: 1px solid white;
+	text-align: center;
+	padding-bottom: 10px;
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+
+p {
+	margin: 5px;
+}
+
+input {
+	background-color: #b4b4b3;
+	opacity: 0.7;
+	border: none;
+}
+
+button {
+	background-color: #353535;
+	color: white;
+	width: 220px;
+	height: 60px;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	font-size: 18px;
+	border: 0;
+	outline: 0;
+}
+
+.login-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #b4b4b3;
+	opacity: 0.7;
+	width: 60%;
+	height: 60%;
+	border-radius: 20px;
+	padding: 100px;
+	gap: 20px;
+	box-sizing: border-box;
+}
+
+.login-content {
+	display: flex;
+	justify-content: space-between;
+	width: 220px;
+	border-bottom: 1px solid white;
+	padding-bottom: 2px;
+	margin-bottom: 20px;
+	color: white;
+}
+
+.login-footer {
+	display: flex;
+	font-size: 12px;
+}
+
+.signup {
+	border-right: 1px solid black;
+	padding-right: 20px;
+}
+
+.finding-id-pw {
+	padding-left: 20px;
+}
