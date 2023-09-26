@@ -1,0 +1,88 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("backexample.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0px;
+}
+.container {   
+    display: flex; 
+    flex-direction: column;
+    height: 60%;
+    width: 60%;
+    border-radius: 20px;
+    background-color: gray;
+    opacity: 80%;
+    align-items: center;
+    justify-content: center;
+}
+.form_title{
+    width: 350px;
+    text-align: center;
+}
+.h1 {
+    
+    justify-content: center;
+}
+.form_main{
+    width: 240px;
+}
+
+.form_input {
+    margin-top: 20px;
+    width: 100%;
+    background-color: transparent;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: white;
+    padding-bottom: 5px;
+}
+input::placeholder {
+    color: white;
+    
+}
+input:focus {
+    outline: none;
+}
+
+input[type=submit] {
+    color: white;
+}
+
+.form_button{
+    width: 100%;
+    height: 40px;
+    margin-top: 30px;
+    border-radius: 15px;
+    border: 0;
+    background-color: black;
+    font-style: white;
+}
+.form_foot{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.foot_font{
+    font-size: small; 
+    text-decoration:none;
+}
+a:link {
+    color : black;
+}
+a:visited {
+    color : black;
+}
+a:hover {
+    color : gray;
+}
+a:active {
+    color : gray
+}
+
