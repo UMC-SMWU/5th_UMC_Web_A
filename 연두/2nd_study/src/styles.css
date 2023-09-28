@@ -1,0 +1,133 @@
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://umc-smwu.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Ff1912130-0409-4e90-a90f-6091ae253e73%2F5d87f741-86bf-41c3-afe0-1cc1627eb8bc%2FUMC_%25EB%25AD%2594%25EA%25B0%2580_%25EA%25B0%2584%25EC%25A7%2580%25EB%2582%2598%25EB%258A%2594_%25EB%25B0%25B0%25EA%25B2%25BD1_2.svg?table=block&id=8a73f1ac-3e47-4d5b-869c-d3fd7974abc1&spaceId=5e7d7daf-2be7-4c50-9b93-216549b3e561&userId=&cache=v2");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  width: 48%;
+  border-radius: 20px;
+  background-color: rgb(146, 149, 160);
+  align-items: center;
+  justify-content: center;
+}
+.form_title {
+  width: 270px;
+  text-align: center;
+  padding: 0px;
+}
+.title {
+  font-size: 42px;
+  font-weight: bolder;
+  justify-content: center;
+}
+.form_main {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container fieldset {
+  border: 0;
+  padding: 0 10px;
+  margin-bottom: 5px;
+}
+.container fieldset label {
+  color: white;
+  font-weight: lighter;
+  font-size: 11px;
+}
+.form_input {
+  display: inline-block;
+  background-color: transparent;
+  outline: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  height: 24px;
+  border-radius: 4px;
+  margin: 4px 0;
+  padding: 0 11px;
+  color: white;
+}
+input:focus {
+  outline: white;
+}
+input[type="submit"] {
+  color: white;
+}
+
+.form_button {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 15px;
+  border: 0;
+  background-color: rgb(142, 142, 142);
+  font-style: white;
+  font-size: larger;
+}
+.activate-button {
+  background-color: rgb(53, 53, 53);
+}
+.success-guide {
+  display: block;
+  font-size: 10px;
+  color: green;
+}
+.success-guide::before {
+  content: "";
+  display: line-block;
+  line-height: 10px;
+}
+.failure-guide {
+  display: block;
+  font-size: 10px;
+  color: red;
+}
+.failure-guide::before {
+  content: "";
+  display: line-block;
+  line-height: 10px;
+}
+.hide {
+  display: none;
+}
+
+#modal-wrap {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+#modal {
+  width: 330px;
+  height: 140px;
+  border-radius: 10px;
+  background: white;
+  padding: 25px 15px;
+}
+#modal-title {
+  margin-top: 15px;
+  font-size: larger;
+  font-weight: bold;
+}
+#modal-close {
+  align-items: flex-end;
+  text-align: right;
+}
