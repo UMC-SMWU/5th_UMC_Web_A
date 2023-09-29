@@ -1,0 +1,128 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F5e7d7daf-2be7-4c50-9b93-216549b3e561%2F5d87f741-86bf-41c3-afe0-1cc1627eb8bc%2FUMC_%25EB%25AD%2594%25EA%25B0%2580_%25EA%25B0%2584%25EC%25A7%2580%25EB%2582%2598%25EB%258A%2594_%25EB%25B0%25B0%25EA%25B2%25BD1_2.svg?table=block&id=f452eacf-a05d-4625-9db6-063e43cc1a91&spaceId=5e7d7daf-2be7-4c50-9b93-216549b3e561&userId=e537e835-caec-4180-9ac6-732f109045ee&cache=v2");
+	background-size: cover;
+	height: 100vh;
+	width: auto;
+	margin: 0px;
+}
+
+h1 {
+	font-weight: 700;
+	width: 300px;
+	border-bottom: 1px solid white;
+	text-align: center;
+	padding-bottom: 10px;
+	margin: 0px;
+	font-size: 40px;
+}
+
+p {
+	margin: 5px;
+}
+
+input {
+	background-color: #9295a0;
+	opacity: 0.7;
+	border: none;
+}
+
+.sign-up-page {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.sign-up-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #9295a0;
+	opacity: 0.9;
+	width: 100%;
+	max-width: 480px;
+	border-radius: 20px;
+	margin: auto auto;
+	padding: 30px;
+	gap: 20px;
+	box-sizing: border-box;
+	font-size: 12px;
+}
+
+.sign-up-content {
+	display: flex;
+	justify-content: center;
+	align-items: left;
+	flex-direction: column;
+	padding-bottom: 2px;
+	margin-bottom: 10px;
+	color: white;
+	width: 200px;
+}
+
+.sign-up-content > input {
+	border: 1px solid white;
+	border-radius: 5px;
+	height: 20px;
+}
+
+#sign-up-button {
+	background-color: #323232;
+	color: white;
+	width: 200px;
+	height: 40px;
+	border-radius: 10px;
+	font-size: 15px;
+	border: 0;
+	outline: 0;
+}
+
+#sign-up-button:disabled {
+	background-color: #8e8e8e;
+}
+
+.sign-up-completion-modal-overlay {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(1px);
+}
+.sign-up-completion-modal-overlay.open {
+	display: flex;
+}
+.sign-up-completion-modal {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	width: 100%;
+	max-width: 300px;
+	padding: 20px;
+	border-radius: 20px;
+}
+.sign-up-completion-modal-button-wrapper {
+	display: flex;
+	justify-content: right;
+	width: 100%;
+}
+.sign-up-completion-modal-button-wrapper > button {
+	background-color: white;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}

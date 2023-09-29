@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SignUp</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="index.js" defer></script>
+	</head>
+	<body>
+		<div class="sign-up-page">
+			<div class="sign-up-box">
+				<h1>회원 가입</h1>
+
+				<div class="signup">
+					<div class="sign-up-content">
+						<p>이름</p>
+						<input type="text" name="name" id="name" minlength="2"></input>
+						<span id="nameCheck"></span>
+					</div>
+
+					<div class="sign-up-content">
+						<p>닉네임</p>
+						<input type="text" name="nickName" id="nickName" minlength="2" maxlength="5"></input>
+						<span id="nickNameCheck"></span>
+					</div>
+
+					<div class="sign-up-content">
+						<p>이메일</p>
+						<input type="email" name="email" id="email"></input>
+						<span id="emailCheck"></span>
+					</div>
+
+					<div class="sign-up-content">
+						<p>비밀번호</p>
+						<input type="password" name="password" id="password" minlength="8"></input>
+						<span id="passwordCheck"></span>
+					</div>
+
+					<div class="sign-up-content">
+						<p>비밀번호 확인</p>
+						<input type="password" id="passwordConfirm"></input>
+						<span id="passwordConfirmCheck"></span>
+					</div>
+				</div>
+
+				<button id="sign-up-button" onclick="handleSignUpButtonClick()">가입하기</button>
+			</div>
+
+			<div class="sign-up-completion-modal-overlay">
+				<div class="sign-up-completion-modal">
+					<h2>가입 성공!</h2>
+					<p>umc 챌린저 가입을 축하합니다!!</p>
+					<div class="sign-up-completion-modal-button-wrapper">
+						<button onclick="handleSignUpCompletionModalCloseButtonClick()">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
