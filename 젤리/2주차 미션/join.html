@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UMC workbook week 2</title>
+    <link rel="stylesheet" href="join.css" />
+  </head>
+  <body>
+    <div class="box1">
+      <h1>회원가입</h1>
+      <hr />
+      <form class="info">
+        <p class="label">이름</p>
+        <input type="text" class="id" name="iid" required />
+        <p class="warning" id="wid">필수 입력 항목입니다!</p>
+        <p class="label">닉네임</p>
+        <input type="text" class="nickname" name="inickname" required />
+        <p class="warning" id="wnickname">닉네임은 2~5글자로 구성해주세요!</p>
+        <p class="label">이메일</p>
+        <input type="email" class="email" name="iemail" required />
+        <p class="warning" id="weamail">올바른 메일 형식이 아닙니다!</p>
+        <p class="label">비밀번호</p>
+        <input type="password" class="pwd" name="ipwd" required />
+        <p class="warning" id="wpwd">
+          영어+숫자+특수문자를 조합하여 작성해주세요.
+        </p>
+        <p class="label">비밀번호 확인</p>
+        <input type="password" class="pwdchk" name="ipwdchk" required />
+        <p class="warning" id="wpwdchk">비밀번호가 일치하지 않습니다</p>
+        <button id="joinbutton" type="submit">가입하기</button>
+      </form>
+      <div class="modal-wrapper">
+        <div class="modal">
+          <div class="modal-title">가입 성공!</div>
+          <p>UMC 챌린저 가입을 축하드립니다!!</p>
+          <button id="close">닫기</button>
+        </div>
+      </div>
+    </div>
+    <script src="/젤리/2주차 미션/join.js"></script>
+    <script src="/젤리/2주차 미션/join_modal.js"></script>
+  </body>
+</html>
