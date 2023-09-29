@@ -1,0 +1,136 @@
+body {
+  background-image: url(./1.svg);
+  background-size: cover;
+  margin: 0%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-size: cover; no-repeat과의 차이 찾기 */
+}
+
+.box1 {
+  text-align: center;
+  display: block;
+  /* display 역할 제대로 알기 */
+  position: absolute;
+  background-color: rgba(212, 218, 227, 0.7);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 75%;
+  border-radius: 20px;
+}
+
+h1 {
+  margin-top: 50px;
+  font-size: 60px;
+}
+
+hr {
+  margin-top: -2%;
+  margin-bottom: 3%;
+  border: 1px solid white;
+  width: 40%;
+}
+
+.warning {
+  color: red;
+  margin-top: 0%;
+  margin-left: 35.5%;
+  margin-bottom: 0%;
+  font-size: smaller;
+  text-align: left;
+  visibility: hidden;
+}
+
+.label {
+  color: white;
+  font-size: smaller;
+  margin-bottom: 0px;
+  margin-left: 35%;
+  margin-top: 10px;
+  text-align: left;
+}
+
+input {
+  margin: 5px;
+  background: none;
+  text-align: left;
+  width: 280px;
+  height: 30px;
+  border-color: white;
+  border-radius: 10px;
+  color: white;
+}
+
+input:focus {
+  color: white;
+  outline: none;
+}
+
+button {
+  width: 280px;
+  height: 50px;
+  margin: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: normal;
+  background: black;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background: gray;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: white;
+  padding: 30px 16px;
+  border-radius: 30px;
+  width: 320px;
+}
+
+.modal-title {
+  margin-top: 10%;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.modal p {
+  font-size: 16px;
+  margin: 15px;
+}
+
+.close-wrapper {
+  text-align: right;
+}
+
+#close {
+  background-color: white;
+  color: black;
+  border: 1px solid gray;
+  font-size: 15px;
+  width: 15%;
+  height: 10%;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-left: 70%;
+}
