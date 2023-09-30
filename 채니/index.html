@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UMC- first task</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>가입성공!</p>
+        <div class="celeb-content">UMC 챌린저 가입을 축하합니다!!</div>
+        <div class="closeButton" onclick="closeModal()">닫기</div>
+      </div>
+    </div>
+
+    <div class="mkaccount-block">
+      <div class="account-contents">
+        <div class="mkaccount-title">회원가입</div>
+        <form>
+          <label for="username">이름</label>
+          <input
+            class="mkaccount-id"
+            type="text"
+            id="username"
+            name="username"
+          /><br />
+          <div class="error-message" id="username-error-message"></div>
+
+          <label for="nickname">닉네임</label>
+          <input
+            class="mkaccount-pre-id"
+            type="text"
+            id="nickname"
+            name="nickname"
+          /><br />
+          <div class="error-message2" id="nickname-error-message"></div>
+
+          <label for="email">이메일</label>
+          <input
+            class="mkaccount-email"
+            type="email"
+            id="email"
+            name="email"
+          /><br />
+          <div class="error-message3" id="email-error-message"></div>
+
+          <label for="password">비밀번호</label>
+          <input
+            class="mkaccount-pw"
+            type="password"
+            id="password"
+            name="password"
+          /><br />
+          <div class="error-message4" id="password-error-message"></div>
+
+          <label for="password">비밀번호 확인</label>
+          <input
+            class="mkaccount-double-pw"
+            type="password"
+            id="double-password"
+            name="password"
+          /><br />
+          <div class="error-message5" id="passwordConfirm-error-message"></div>
+        </form>
+
+        <div class="login-footer">
+          <button class="make-account" onclick="checkUserInfo()">
+            가입하기
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

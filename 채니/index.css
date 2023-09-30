@@ -1,0 +1,178 @@
+body {
+  background-image: url("umc_task.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+label {
+  margin-left: 40px;
+  margin-top: 10px;
+  color: rgba(229, 229, 229, 0.863);
+  display: block; /* 블록 레벨 요소로 만듭니다. */
+  text-align: left; /* 텍스트를 왼쪽으로 정렬합니다. */
+  margin-bottom: 5px; /* 라벨과 입력란 사이의 간격 조정 */
+}
+
+input {
+  padding: 5px; /* 입력란 내부 여백 설정 */
+  width: 250px;
+  background-color: rgba(212, 213, 214, 0.223);
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.mkaccount-block {
+  width: 550px;
+  height: 580px;
+  border-radius: 14px;
+  background-color: rgba(231, 240, 250, 0.63);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  display: flex;
+}
+
+.account-contents {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.mkaccount-title {
+  font-weight: 900;
+  font-size: xx-large;
+  border-bottom: 2px solid rgba(229, 229, 229, 0.863);
+  padding: 20px;
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+.mkaccount-id
+  .mkaccount-pre-id
+  .mkaccount-email
+  .mkaccount-pw
+  .mkaccount-double-pw {
+  border: 1px solid rgba(229, 229, 229, 0.863);
+  width: 250px;
+  text-align: left;
+  padding-bottom: 10px;
+  font-size: large;
+  margin: 20px auto 10px auto;
+  position: relative;
+  border-radius: 12px;
+  background-color: rgba(133, 133, 132, 0.863);
+}
+
+.login-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.make-account {
+  background-color: rgba(133, 133, 132, 0.863);
+  color: white;
+  font-weight: 400;
+  width: 260px;
+  height: 50px;
+  border-radius: 12px;
+  margin: 20px auto 10px auto;
+  line-height: 50px;
+}
+
+.error-message {
+  display: relative;
+  color: red;
+  font-size: small;
+  margin-left: -140px;
+  margin-bottom: -10px;
+}
+
+.error-message2 {
+  display: relative;
+  color: red;
+  font-size: small;
+  margin-left: -60px;
+  margin-bottom: -10px;
+}
+
+.error-message3 {
+  display: relative;
+  color: red;
+  font-size: small;
+  margin-left: -70px;
+  margin-bottom: -10px;
+}
+
+.error-message4 {
+  display: relative;
+  color: red;
+  font-size: small;
+  margin-left: 10px;
+  margin-bottom: -10px;
+}
+
+.error-message5 {
+  display: relative;
+  color: red;
+  font-size: small;
+  margin-left: -80px;
+  margin-bottom: -10px;
+}
+
+/* 모달창 스타일 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  width: 400px;
+  height: 250px;
+  border-radius: 20px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+.p {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+.celeb-content {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.closeButton {
+  float: right;
+  margin-top: 60px;
+  border: 1px black solid;
+  width: 40px;
+  border-radius: 5px;
+}
