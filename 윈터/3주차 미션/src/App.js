@@ -26,10 +26,13 @@ function App() {
 
 const Container = styled.div`
 	background-color: #22264c;
+	padding: 20px 0px;
 `;
 
 const MovieCardList = styled.ul`
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	gap: 20px;
 	flex-wrap: wrap;
 `;
