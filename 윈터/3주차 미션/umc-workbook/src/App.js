@@ -1,21 +1,41 @@
 import React from "react";
-import Movie from "./Components/Movie"; // Movie 컴포넌트를 가져오세요.
+import "./index.css";
+import { MovieCard } from "./Components";
+import { movies, TMDB_IMAGE_BASE_URL } from "./database";
+
+import styled from "@emotion/styled";
 
 function App() {
-	// movies.results에 대한 가상 데이터 (예: 배열)를 생성합니다.
-	const moviesData = [
-		{ title: "영화 1", director: "감독 1" },
-		{ title: "영화 2", director: "감독 2" },
-		// 필요한 만큼 데이터를 추가하세요.
-	];
-
 	return (
-		<div className="app-container">
-			{moviesData.map((item, index) => (
-				<Movie key={index} movieData={item} />
-			))}
-		</div>
+		<Container>
+			<MovieCardList>
+				{movies.results.map(({ id, title, overview, poster_path, vote_average }) => (
+					<MovieCardItem key={id}>
+						<MovieCard
+							title={title}
+							overview={overview}
+							posterPath={`${TMDB_IMAGE_BASE_URL}${poster_path}`}
+							voteAverage={vote_average}
+						/>
+					</MovieCardItem>
+				))}
+			</MovieCardList>
+		</Container>
 	);
 }
+
+const Container = styled.div`
+	background-color: #22264c;
+`;
+
+const MovieCardList = styled.ul`
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+`;
+
+const MovieCardItem = styled.li`
+	max-width: 320px;
+`;
 
 export default App;
