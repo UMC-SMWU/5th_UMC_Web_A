@@ -2,9 +2,10 @@ import Movie from "./components/Movie";
 import { movies } from "./movieDummy";
 
 function App() {
+
   return (
     <div className="App">
-      <div className="app-container">
+      <ul className="grid4">
         {
           movies.results.map((item)=>{
             return (<>
@@ -19,7 +20,7 @@ function App() {
             )
           })
         }
-      </div>
+      </ul>
     </div>
   );
 }

@@ -3,7 +3,7 @@ function Movie({id,poster_path,title,vote_average,overview}) {
   
 
     return (<>
-      <div className="movie_item">
+      <li className="movie_item">
         <img className="out_image" src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} title={title} />
         <div className="out_info">
           <p className="out_title">{title}</p>
@@ -11,12 +11,12 @@ function Movie({id,poster_path,title,vote_average,overview}) {
         </div>
 
         <div className="movie_item_info">
-          <div className="in_layout">
+          <div>
             <p className="in_title">{title}</p>
             <p className="in_overview">{overview}</p>
           </div>
         </div>
-      </div>
+      </li>
 
       
       </>
@@ -24,3 +24,4 @@ function Movie({id,poster_path,title,vote_average,overview}) {
   }
   
   export default Movie
+  //className="in_layout"
