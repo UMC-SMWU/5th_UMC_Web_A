@@ -6,6 +6,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
 }
 
 .movie-container {
@@ -14,10 +15,12 @@ body {
   color: white;
   border-radius: 5px;
   margin: 16px;
+  position: relative;
 }
 
 .movie-container img {
   max-width: 100%;
+  position: relative;
 }
 
 .movie-info {
@@ -25,6 +28,7 @@ body {
   padding: 20px;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .movie-info h4 {
@@ -33,4 +37,13 @@ body {
 
 .movie-info span {
   margin-left: 3px;
+}
+
+.movie-ov {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
 }

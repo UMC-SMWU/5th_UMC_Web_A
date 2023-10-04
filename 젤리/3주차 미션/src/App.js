@@ -1,3 +1,4 @@
+import { isVisible } from "@testing-library/user-event/dist/utils";
 import Movie from "./Components/movie";
 import { movies } from "./movieDummy";
 
@@ -11,6 +12,7 @@ function App() {
               title={item.title}
               poster_path={item.poster_path}
               vote_average={item.vote_average}
+              overview={item.overview}
             />
           );
         })}
@@ -20,15 +22,3 @@ function App() {
 }
 
 export default App;
-
-function overView() {
-  return (
-    <div>
-      <div className="overview_container">
-        {movies.results.map((item) => {
-          return <Movie title={item.title} overview={item.overview} />;
-        })}
-      </div>
-    </div>
-  );
-}
