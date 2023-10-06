@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signUpPage.css">
+    <title>회원가입</title>
+</head>
+
+<body>
+    <div class="white-box" onsubmit="return false;">
+        <h1 class="login-title">회원가입</h1>
+        <form class="login-box">
+            <label for="username">이름</label><br>
+            <input type="text" id="username" name="username" class="input" onfocusout="signUpValidation_1()"><br>
+            <p class="validation-check" id="username-validation">유효성검사</p>
+
+            <label for="nickname">닉네임</label><br>
+            <input type="text" id="nickname" name="nickname" class="input" onfocusout="signUpValidation_2()"><br>
+            <p class="validation-check" id="nickname-validation">유효성검사</p>
+
+            <label for="email">이메일</label><br>
+            <input type="text" id="email" name="email" class="input" onfocusout="signUpValidation_3()"><br>
+            <p class="validation-check" id="email-validation">유효성검사</p>
+
+            <label for="password">비밀번호</label><br>
+            <input type="password" id="password" name="password" class="input" onfocusout="signUpValidation_4()"><br>
+            <p class="validation-check" id="password-validation">유효성검사</p>
+
+            <label for="password_check">비밀번호 확인</label><br>
+            <input type="password" id="password_check" name="password_check" class="input" onfocusout="signUpValidation_5()"><br>
+            <p class="validation-check" id="password_check_validation">유효성검사</p>
+
+            <button id="signUp">가입하기</button>
+        </form>    
+    </div>
+
+    <div class="modal-wrapper" style="display: none;">
+        <div class="modal">
+          <div class="modal-title">가입성공!</div>
+          <p>UMC 챌린저 가입을 축하합니다!!</p>
+          <div class="close-wrapper">
+            <button id="close">닫기</button>
+          </div>
+        </div>
+      </div>
+
+    <script src="./signUpPage.js"></script>
+</body>
+
+</html>

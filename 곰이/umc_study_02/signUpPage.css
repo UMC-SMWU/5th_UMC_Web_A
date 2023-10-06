@@ -1,0 +1,104 @@
+body {
+    background-color: rgb(91, 91, 91);
+    background-image: url(./img/umc_login_page.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.white-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 900px;
+    background-color: rgba(242, 243, 255, 0.507);
+    margin: 0 auto;
+    border-radius: 10%;
+}
+
+.login-box {
+    width: 300px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 80px;
+    text-align: left;
+    color: white
+}
+
+.login-title {
+    width: 500px;
+    font-size: 70px;
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid white;
+    position: relative;
+    padding: 15px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    top: 30px;
+    text-align: center;
+}
+
+label {
+    font-size: 17px;
+}
+
+.input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.05em;
+    width: 290px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(179, 179, 179);
+    border: 1px solid white;
+}
+
+.validation-check {
+    color: rgba(0, 255, 166, 0);
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.modal-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.modal {
+background: white;
+padding: 24px 16px;
+border-radius: 10px;
+width: 320px;
+}
+
+.modal-title {
+font-size: 24px;
+font-weight: bold;
+text-align: center;
+}
+
+.modal p {
+font-size: 16px;
+text-align: center;
+}
+
+.close-wrapper {
+text-align: right;
+}
+
+#signUp {
+    width: 300px;
+    height: 70px;
+    border-radius: 10px;
+    border: 0px;
+    color: white;
+    font-size: 30px;
+}
