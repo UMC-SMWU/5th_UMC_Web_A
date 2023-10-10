@@ -1,5 +1,5 @@
 import React from "react";
-import Movie from "./Movie.jsx";
+import Movie from "./Components/Movie/Movie";
 import movies from "./movieDummy.js";
 
 function App() {
