@@ -1,5 +1,5 @@
 import { useState } from "react";
-import * as S from "./MovieCard.style";
+import * as S from "./Movie.style";
 
 const MovieCard = ({ title, overview, voteAverage, posterPath }) => {
 	const [hover, setHover] = useState(false);
