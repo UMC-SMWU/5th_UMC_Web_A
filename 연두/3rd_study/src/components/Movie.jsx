@@ -1,8 +1,7 @@
 // componet만들어 export한 뒤 외부 폴더에서 사용가능
 function Movie({id,poster_path,title,vote_average,overview}) {
-  
 
-    return (<>
+    return (
       <li className="movie_item">
         <img className="out_image" src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} title={title} />
         <div className="out_info">
@@ -17,11 +16,7 @@ function Movie({id,poster_path,title,vote_average,overview}) {
           </div>
         </div>
       </li>
-
-      
-      </>
     )
   }
   
-  export default Movie
-  //className="in_layout"
+  export default Movie;
