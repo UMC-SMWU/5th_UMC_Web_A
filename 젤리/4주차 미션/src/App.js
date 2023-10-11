@@ -1,7 +1,7 @@
-import { isVisible } from "@testing-library/user-event/dist/utils";
-import Movie from "./Components/Movie/Movie";
-import { movies } from "./movieDummy";
-import * as A from "./Components/Movie/Movie.style";
+//import { isVisible } from '@testing-library/user-event/dist/utils';
+import Movie from './Components/Movie/Movie';
+import { movies } from './movieDummy';
+import * as A from './Components/Movie/Movie.style';
 
 function App() {
   return (

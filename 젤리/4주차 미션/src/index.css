@@ -1,8 +1,8 @@
-/* body {
-  background-color: rgb(26, 26, 56);
+* {
+  margin: 0;
 }
 
-.app-container {
+/* .app-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
