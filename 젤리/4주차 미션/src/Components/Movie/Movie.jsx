@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import * as A from "./Movie.style";
+import * as A from './Movie.style';
+import { useState } from 'react';
 
-const IMG_BASE_URL = "https://image.tmdb.org/t/p/w1280";
+const IMG_BASE_URL = 'https://image.tmdb.org/t/p/w1280';
 
 export default function Movie({ title, poster_path, vote_average, overview }) {
   const [isHovered, setIsHovered] = useState(false);

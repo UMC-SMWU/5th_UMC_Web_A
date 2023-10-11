@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Body = styled.body`
   background-color: rgb(26, 26, 56);
+  // margin: 0;
 `;
 
 export const App_container = styled.div`
@@ -51,5 +52,5 @@ export const Movie_ov = styled.div`
 `;
 
 export const Overflow = styled.span`
-  overflow: scroll;
+  overflow: auto;
 `;
