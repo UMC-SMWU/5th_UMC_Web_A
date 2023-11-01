@@ -21,6 +21,9 @@ export const Content = styled.ul`
 
 export const Options = styled.li`
   margin-left: 10px;
+  text-align: center; /* 가운데 정렬 */
+  display: flex; /* 사용자 내용을 수직 중앙 정렬하기 위해 flex 컨테이너로 설정 */
+  align-items: center; /* 수직 정렬 설정 */
 
   a {
     text-decoration: none; /* Remove underline */
