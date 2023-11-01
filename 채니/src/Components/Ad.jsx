@@ -1,4 +1,9 @@
 import React from "react";
+import { ReactComponent as Banner } from "../img/ad_imaging.svg";
+
+const bannerStyle = {
+  marginTop: "-44px", // margin-top을 42px로 설정
+};
 
 class Ad extends React.Component {
   constructor(props) {
@@ -17,7 +22,7 @@ class Ad extends React.Component {
   render() {
     return (
       <div>
-        {this.state.showAd && <img src="ad_imaging.svg" alt="배너사진" />}
+        {this.state.showAd && <Banner style={bannerStyle} width="100%" />}
         <button onClick={this.handleToggleClick}>
           {this.state.showAd ? "광고 숨기기" : "광고 보기"}
         </button>
