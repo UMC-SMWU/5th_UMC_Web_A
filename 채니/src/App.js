@@ -1,15 +1,19 @@
 import React from "react";
-import Movie from "./Components/Movie/Movie";
-import movies from "./movieDummy.js";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "./Components/Header"; // Header 컴포넌트를 불러옵니다.
+import Main from "./Main";
+import Home from "./Pages/Home";
 
 function App() {
   return (
-    <div className="App">
-      <div className="app-container">
-        {movies.results.map((item) => {
-          return <Movie key={item.id} movie={item} />;
-        })}
-      </div>
+    <div className="root-wrap">
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/movie" element={<Main />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
