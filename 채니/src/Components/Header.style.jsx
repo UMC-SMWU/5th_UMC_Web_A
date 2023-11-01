@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 export const Header = styled.header`
   background-color: rgb(29, 29, 85);
   display: inline-flex;
-  margin: 0 15px;
   flex-wrap: wrap;
   width: 100%;
 `;
