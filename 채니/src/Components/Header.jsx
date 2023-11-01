@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import * as S from "./Header.style";
+import LoginControl from "./LoginControl";
 
 function Header() {
   return (
@@ -25,6 +26,10 @@ function Header() {
 
           <S.Options>
             <Link to="/home">홈페이지</Link>
+          </S.Options>
+
+          <S.Options>
+            <LoginControl />
           </S.Options>
         </S.Content>
       </S.Navi>
