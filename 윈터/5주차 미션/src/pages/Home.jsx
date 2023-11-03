@@ -1,5 +1,10 @@
 import React from "react";
+import Ad from "../Components/Ad";
 
 export default function Home() {
-	return <div>Home</div>;
+	return (
+		<div>
+			<Ad />
+		</div>
+	);
 }
