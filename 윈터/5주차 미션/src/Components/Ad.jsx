@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import bannerImage from "../img/banner.svg";
 
 function Ad() {
 	const [isCheck, setCheck] = useState(true);
 
 	return (
 		<div>
-			{isCheck && <img width="100%" src={bannerImage} alt="광고배너" />}
+			{isCheck && <img width="100%" src="/img/banner.svg" alt="광고배너" />}
 			<button
 				onClick={() => {
 					setCheck((e) => !e);
