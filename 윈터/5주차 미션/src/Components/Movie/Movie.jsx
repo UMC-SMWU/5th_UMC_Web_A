@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as S from "./Movie.style";
 
-const MovieCard = ({ title, overview, voteAverage, posterPath }) => {
+const Movie = ({ title, overview, voteAverage, posterPath }) => {
 	const [hover, setHover] = useState(false);
 
 	return (
@@ -21,4 +21,4 @@ const MovieCard = ({ title, overview, voteAverage, posterPath }) => {
 	);
 };
 
-export default MovieCard;
+export default Movie;
