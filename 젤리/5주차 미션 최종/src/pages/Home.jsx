@@ -1,7 +1,11 @@
 import React from 'react'
+import Adpage from '../Components/Adpage'
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <div>
+      <Adpage />
+    </div>
   )
 }
+
