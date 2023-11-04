@@ -31,9 +31,9 @@ export default function Header() {
 							</Link>
 						</li>
 					</ul>
-					<button>
+					<div style={{ display: "flex", alignItems: "center" }}>
 						<LoginControl />
-					</button>
+					</div>
 				</div>
 				<div className=""></div>
 			</div>
