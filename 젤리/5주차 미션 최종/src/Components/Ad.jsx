@@ -1,20 +1,37 @@
-import React, { useState } from 'react';
-import { ReactComponent as Banner } from '../Img/Banner.svg';
+import React from "react";
+import BannerImg from "../Img/Banner.svg"
+import styled from "styled-components"
 
-export default function Ad(props) {
-    const [isCheck, setCheck] = useState(true);
+class Ad extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { isAdOn: true };
+        this.handleClick = this.handleClick.bind(this);
+    }
 
-    return (
-        <div>
-            <button
-                onClick={() => {
-                    setCheck((e) => !e);
-                }}
-            >
-                {isCheck ? '광고 안 보기' : '광고 보기'}
-            </button>
-            {isCheck && <Banner />}
-        </div>
-    );
+    handleClick() {
+        this.setState(prevState => ({
+            isAdOn: !prevState.isAdOn,
+        }));
+    }
+
+    render() {
+        const bannerStyle = {
+            width: '100%',
+        };
+
+        return (
+            <div>
+                {this.state.isAdOn ? (
+                    <img src={BannerImg} alt="광고" style={bannerStyle} />
+                ) : null}
+                <button onClick={this.handleClick}>
+                    {this.state.isAdOn ? "광고 숨기기" : "광고 보기"}
+                </button>
+            </div>
+        );
+    }
 }
+
+export default Ad;
 
