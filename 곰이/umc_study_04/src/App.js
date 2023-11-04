@@ -1,7 +1,8 @@
+/* eslint-disable react/jsx-key */
+import React from "react";
 import Movie from "./Components/Movie/Movie";
 import { movies } from "./movieDummy";
-import * as S from "./Components/Movie/Movie.style";
-
+import * as S from "./Components/Movie/Movie.style" ;
 
 function App() {
   return (

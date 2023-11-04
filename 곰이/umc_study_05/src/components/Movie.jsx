@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/react-in-jsx-scope */
 import { useState } from "react";
 import * as S from "./Movie.style";
 
@@ -43,3 +41,5 @@ function Movie({title, poster_path, vote_average, overview}) {
   }
   
   export default Movie;
+
+  
