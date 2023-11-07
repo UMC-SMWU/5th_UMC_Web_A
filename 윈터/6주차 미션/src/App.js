@@ -9,18 +9,16 @@ import { MoviesPage } from "./pages";
 function App() {
 	return (
 		<div className="root-wrap ">
-			<div className="root-wrap">
-				<BrowserRouter>
-					<Header />
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/movies" element={<MoviesPage />} />
-						<Route path="/tv" element={<TV />} />
-						<Route path="/celebrity" element={<Celebrity />} />
-						<Route path="*" element={<NotFound />} />
-					</Routes>
-				</BrowserRouter>
-			</div>
+			<BrowserRouter>
+				<Header />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/movies" element={<MoviesPage />} />
+					<Route path="/tv" element={<TV />} />
+					<Route path="/person" element={<Celebrity />} />
+					<Route path="*" element={<NotFound />} />
+				</Routes>
+			</BrowserRouter>
 		</div>
 	);
 }
