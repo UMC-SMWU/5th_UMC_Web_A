@@ -7,7 +7,7 @@ export default function Movie(props) {
     const navigate = useNavigate();
 
     const onClickMovieItem = () => {
-        navigate(`/movie/${props.title}`, {
+        navigate(`/Movies/${props.title}`, {
             state: props,
         });
     };
