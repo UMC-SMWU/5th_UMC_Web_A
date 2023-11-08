@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import TV from "./Pages/TV";
 import Celebirity from "./Pages/Celebirity";
 import NotFound from "./Pages/NotFound";
+import MovieDetail from "./Pages/MovieDetail";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Header />
         <Home />
         <Routes>
+          <Route path="/movie/:title" element={<MovieDetail />} />
           <Route path="/movie" element={<Movies />} />
           <Route path="/celeb" element={<Celebirity />} />
           <Route path="/tv" element={<TV />} />

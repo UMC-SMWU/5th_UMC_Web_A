@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import * as S from "./Movie.style";
+import { useNavigate } from "react-router-dom";
 
 const IMG_BASE_URL = "https://image.tmdb.org/t/p/w1280";
 
-function Movie(props) {
-  const { movie } = props;
+function Movie({ movie }) {
+  const navigate = useNavigate();
   const [showOverlapping, setShowOverlapping] = useState(false);
 
   const handleMouseOver = () => {
@@ -13,6 +14,12 @@ function Movie(props) {
 
   const handleMouseOut = () => {
     setShowOverlapping(false);
+  };
+
+  const onClickImg = () => {
+    navigate(`/movie/${movie.title}`, {
+      state: { ...movie, poster_path: `${IMG_BASE_URL}${movie.poster_path}` },
+    });
   };
 
   return (
@@ -24,6 +31,7 @@ function Movie(props) {
         <S.Images
           src={`${IMG_BASE_URL}${movie.poster_path}`}
           alt="Movie Poster"
+          onClick={onClickImg}
         />
         <S.Captions>
           <S.MovieTitle>{movie.title}</S.MovieTitle>
