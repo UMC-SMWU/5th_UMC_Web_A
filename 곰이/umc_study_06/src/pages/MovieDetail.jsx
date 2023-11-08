@@ -7,6 +7,7 @@ export default function MovieDetail() {
     const {state} = useLocation();
     console.log(title);
     console.log(state);
+    
     return (
         <div className="page-container" style={{display: "flex", margin: "50px"}}>
             <div>
