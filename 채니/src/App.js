@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Header from "./Components/Header"; // Header 컴포넌트를 불러옵니다.
 import Movies from "./Pages/Movies";
 import Home from "./Pages/Home";
@@ -16,10 +16,11 @@ function App() {
         <Home />
         <Routes>
           <Route path="/movie/:title" element={<MovieDetail />} />
-          <Route path="/movie" element={<Movies />} />
+          <Route path="/" element={<Movies />} />
           <Route path="/celeb" element={<Celebirity />} />
           <Route path="/tv" element={<TV />} />
           <Route path="/nf" element={<NotFound />} />
+          <Route path="*" element={<Navigate to="/nf" />} />
         </Routes>
       </BrowserRouter>
     </div>
