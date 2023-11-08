@@ -13,10 +13,11 @@ function App() {
     <div className="root-wrap">
       <BrowserRouter>
         <Header />
-        <Home />
+
         <Routes>
           <Route path="/movie/:title" element={<MovieDetail />} />
-          <Route path="/" element={<Movies />} />
+          <Route path="/movie" element={<Movies />} />
+          <Route path="/" element={<Home />} />
           <Route path="/celeb" element={<Celebirity />} />
           <Route path="/tv" element={<TV />} />
           <Route path="/nf" element={<NotFound />} />
