@@ -1,64 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 
-class LoginControl extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLoggedIn: false, // 초기에 로그아웃 상태로 설정
-    };
-  }
+function LoginControl() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  handleLoginClick = () => {
-    this.setState({ isLoggedIn: true });
+  const handleLoginClick = () => {
+    setIsLoggedIn(true);
   };
 
-  handleLogoutClick = () => {
-    this.setState({ isLoggedIn: false });
+  const handleLogoutClick = () => {
+    setIsLoggedIn(false);
   };
 
-  render() {
-    const isLoggedIn = this.state.isLoggedIn;
-    let button;
-    let greeting;
-
-    if (isLoggedIn) {
-      button = (
-        <button
-          onClick={this.handleLogoutClick}
-          style={{ borderRadius: "30px" }}
-        >
-          로그아웃
-        </button>
-      );
-      greeting = (
-        <p style={{ color: "white", fontSize: "14px" }}>
-          &nbsp;&nbsp;&nbsp; 환영합니다.
-        </p>
-      );
-    } else {
-      button = (
-        <button
-          onClick={this.handleLoginClick}
-          style={{ borderRadius: "30px" }}
-        >
-          로그인
-        </button>
-      );
-      greeting = (
-        <p style={{ color: "white", fontSize: "14px" }}>
-          {" "}
-          &nbsp;&nbsp;&nbsp;로그인 해주세요!
-        </p>
-      );
-    }
-
-    return (
-      <div style={{ display: "flex", alignItems: "center" }}>
-        {button}
-        {greeting}
-      </div>
-    );
-  }
+  return (
+    <div style={{ display: "flex", alignItems: "center" }}>
+      {isLoggedIn ? (
+        <>
+          <button onClick={handleLogoutClick} style={{ borderRadius: "30px" }}>
+            로그아웃
+          </button>
+          <p style={{ color: "white", fontSize: "14px" }}>
+            &nbsp;&nbsp;&nbsp; 환영합니다.
+          </p>
+        </>
+      ) : (
+        <>
+          <button onClick={handleLoginClick} style={{ borderRadius: "30px" }}>
+            로그인
+          </button>
+          <p style={{ color: "white", fontSize: "14px" }}>
+            &nbsp;&nbsp;&nbsp;로그인 해주세요!
+          </p>
+        </>
+      )}
+    </div>
+  );
 }
 
 export default LoginControl;
