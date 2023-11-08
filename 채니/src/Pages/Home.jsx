@@ -9,7 +9,6 @@ const homeStyle = {
 function Home() {
   const location = useLocation();
 
-  // 조건부 랜더링
   if (location.pathname !== "/nf") {
     return (
       <div style={homeStyle}>
