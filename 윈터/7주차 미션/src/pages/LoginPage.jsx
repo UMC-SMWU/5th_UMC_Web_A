@@ -96,7 +96,7 @@ const Button = styled.button`
 	}
 `;
 
-export default function Login() {
+export default function LoginPage() {
 	const [email, setEmail] = useState(""); //빈 문자열로 초기화
 	const [pw, setPw] = useState("");
 
@@ -105,23 +105,27 @@ export default function Login() {
 	const [notAllow, setNotAllow] = useState(true); // 확인버튼의 활성화와 비활성화
 
 	const handleEmail = (e) => {
-		setEmail(e.target.value);
 		const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; // 이메일 정규식
-		if (regex.test(email)) {
-			setEmailValid(true);
-		} else {
-			setEmailValid(false);
-		}
+
+		setEmail(e.target.value);
+		setEmailValid(regex.test(email) ? true : false);
+		// if (regex.test(email)) {
+		// 	setEmailValid(true);
+		// } else {
+		// 	setEmailValid(false);
+		// }
 	};
 
 	const handlePassword = (e) => {
-		setPw(e.target.value);
 		const regex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/; // 비밀번호 정규식
-		if (regex.test(pw)) {
-			setPwValid(true);
-		} else {
-			setPwValid(false);
-		}
+
+		setPw(e.target.value);
+		setPwValid(regex.test(pw) ? true : false);
+		// if (regex.test(pw)) {
+		// 	setPwValid(true);
+		// } else {
+		// 	setPwValid(false);
+		// }
 	};
 
 	useEffect(() => {

@@ -1,12 +1,10 @@
 import React from "react";
 import Ad from "../Components/Ad";
-import Login from "../Components/Login";
 
-export default function Home() {
+export default function HomePage() {
 	return (
 		<div>
 			<Ad />
-			<Login />
 		</div>
 	);
 }

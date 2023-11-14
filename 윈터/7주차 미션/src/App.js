@@ -1,24 +1,75 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Header from "./Components/Header";
-import Celebrity from "./pages/Celebrity";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
-import TV from "./pages/TV";
-import { MoviesPage } from "./pages";
-import MovieDetail from "./pages/MovieDetail";
+import { Header } from "./Components";
+import {
+	MoviesPage,
+	HomePage,
+	NotFoundPage,
+	TVPage,
+	CelebrityPage,
+	MovieDetailPage,
+	LoginPage,
+} from "./pages";
 
 function App() {
 	return (
 		<div className="root-wrap ">
 			<BrowserRouter>
-				<Header />
 				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/movies" element={<MoviesPage />} />
-					<Route path="/movies/:title" element={<MovieDetail />} />
-					<Route path="/tv" element={<TV />} />
-					<Route path="/person" element={<Celebrity />} />
-					<Route path="*" element={<NotFound />} />
+					<Route
+						path="/"
+						element={
+							<>
+								<Header />
+								<HomePage />
+							</>
+						}
+					/>
+					<Route
+						path="/movies"
+						element={
+							<>
+								<Header />
+								<MoviesPage />
+							</>
+						}
+					/>
+					<Route
+						path="/movies/:title"
+						element={
+							<>
+								<Header />
+								<MovieDetailPage />
+							</>
+						}
+					/>
+					<Route
+						path="/tv"
+						element={
+							<>
+								<Header />
+								<TVPage />
+							</>
+						}
+					/>
+					<Route
+						path="/person"
+						element={
+							<>
+								<Header />
+								<CelebrityPage />
+							</>
+						}
+					/>
+					<Route path="/login" element={<LoginPage />} />
+					<Route
+						path="*"
+						element={
+							<>
+								<Header />
+								<NotFoundPage />
+							</>
+						}
+					/>
 				</Routes>
 			</BrowserRouter>
 		</div>

@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import LoginControl from "./LoginControl";
+import { Link } from "react-router-dom"; //다른 페이지로 이동하려면, react-router-dom에서 제공하는 Link 컴포넌트를 사용하여 다른 페이지로 이동할 수 있습니다.
+import Login from "../pages/LoginPage";
 
 export default function Header() {
 	return (
@@ -31,9 +31,9 @@ export default function Header() {
 							</Link>
 						</li>
 					</ul>
-					<div style={{ display: "flex", alignItems: "center" }}>
-						<LoginControl />
-					</div>
+					<Link to="/login">
+						<button>로그인</button>
+					</Link>
 				</div>
 				<div className=""></div>
 			</div>

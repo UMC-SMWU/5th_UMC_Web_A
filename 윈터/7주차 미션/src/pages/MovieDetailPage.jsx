@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { TMDB_IMAGE_BASE_URL } from "../database";
 
-const MovieDetail = () => {
+const MovieDetailPage = () => {
 	const { title } = useParams();
 	const { state } = useLocation();
 
@@ -22,4 +22,4 @@ const MovieDetail = () => {
 	);
 };
 
-export default MovieDetail;
+export default MovieDetailPage;
