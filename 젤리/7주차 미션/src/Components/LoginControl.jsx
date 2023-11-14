@@ -4,10 +4,10 @@ import styled from 'styled-components';
 
 const Button = styled.button`
     background-color: white;
-    text-color: rgba(3, 37, 65, 1);
+    color: rgba(3, 37, 65, 1);
     padding: 10px 20px;
     border-radius: 2em;
-    border-line: none;
+    border: none;
     cursor: pointer;
     margin: 10px;
 `;
@@ -22,7 +22,7 @@ export default function LoginControl() {
 
     const handleLoginClick = () => {
         setIsLoggedIn(true);
-        // navigate(`/Login`);
+        navigate(`/Login`);
     }
     const handleLogoutClick = () => {
         setIsLoggedIn(false);
