@@ -21,12 +21,12 @@ export default function LoginControl() {
     const navigate = useNavigate();
 
     const handleLoginClick = () => {
-        setIsLoggedIn(true);
         navigate(`/Login`);
     }
     const handleLogoutClick = () => {
         setIsLoggedIn(false);
     }
+    
 
     return (
         <div>
