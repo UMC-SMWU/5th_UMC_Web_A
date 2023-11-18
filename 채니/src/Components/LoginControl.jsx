@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function LoginControl() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
   const handleLoginClick = () => {
     setIsLoggedIn(true);
+    navigate("/login");
   };
 
   const handleLogoutClick = () => {

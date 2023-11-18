@@ -14,7 +14,7 @@ export const Content = styled.ul`
   display: inline-flex;
   margin: 15px 15px;
   flex-wrap: wrap;
-  list-style: none; /* Remove bullet points */
+  list-style: none;
   padding: 0; /* Remove default padding */
 `;
 
