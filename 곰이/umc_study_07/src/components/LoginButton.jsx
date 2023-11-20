@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import { Lgoin } from "../pages/Login";
 
 const LogButton = styled.button`
   background-color: white;
@@ -12,7 +13,7 @@ const Message = styled.p`
   font-size: 12px;
   margin-left: 10px;
   display: flex;
-  align-items: center;
+  align-items: center;ㅇ
 `;
 
 const LoginWrapper = styled.div`
