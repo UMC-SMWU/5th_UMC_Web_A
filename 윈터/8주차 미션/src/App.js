@@ -39,7 +39,9 @@ function App() {
 						{/* 화씨온도 */}
 						{/* <div className="temperature">{result.data.main.temp}℉</div> */}
 						{/* 섭씨온도 */}
-						<div className="temperature">{Math.round(result.data.main.temp * 10) / 10}°C</div>
+						<div className="temperature">
+							{Math.round((result.data.main.temp - 273.15) * 10) / 10}°C
+						</div>
 						<div className="sky">{result.data.weather[0].main}</div>
 					</ResultWrap>
 				)}
