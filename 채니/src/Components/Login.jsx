@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import * as S from "./Login.style";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../store/thunks";
 
 function Login() {
+  const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [emailError, setEmailError] = useState("");
+  const [loading, setLoading] = useState(false); // 추가: 로딩 상태 관리
+  const [emailError, setEmailError] = useState(""); // 추가: 이메일 에러 상태 관리
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -26,18 +30,42 @@ function Login() {
     setPassword(e.target.value);
   };
 
+  const handleLogin = async () => {
+    if (!email || !password) {
+      alert("아이디와 비밀번호를 모두 입력해주세요.");
+      return;
+    }
+
+    setLoading(true);
+
+    const user = {
+      id: email,
+      pw: password,
+    };
+
+    try {
+      await dispatch(loginUser(user));
+      setTimeout(() => {
+        setLoading(false);
+      }, 1500);
+    } catch (error) {
+      console.error("로그인 실패:", error);
+      setLoading(false);
+    }
+  };
+
   return (
     <S.FormContainer>
-      <S.Title>이메일과 비밀번호를 입력해주세요</S.Title>
+      <S.Title>아이디와 비밀번호를 입력해주세요</S.Title>
       <S.Form>
         <S.Label>
-          이메일주소
+          아이디
           <S.Input
             type="text"
-            placeholder="email을 입력하세요"
+            placeholder="아이디를 입력하세요"
             value={email}
             onChange={handleEmailChange}
-            onBlur={handleEmailBlur} // Trigger validation on blur
+            onBlur={handleEmailBlur}
           />
         </S.Label>
         {emailError && <S.ErrorMsg>{emailError}</S.ErrorMsg>}
@@ -54,7 +82,9 @@ function Login() {
           />
         </S.Label>
       </S.Form>
-      <S.Button>로그인</S.Button>
+      <S.Button disabled={loading} onClick={handleLogin}>
+        {loading ? "Loading..." : "로그인"}
+      </S.Button>
     </S.FormContainer>
   );
 }
