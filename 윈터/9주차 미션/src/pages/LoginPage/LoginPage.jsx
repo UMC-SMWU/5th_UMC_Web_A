@@ -43,10 +43,10 @@ const LoginPage = () => {
 			id: id,
 			pw: password,
 		})
-			.then((response) => {
+			.then(({ data }) => {
 				// 로그인 성공 시 처리
 
-				const accessToken = response.data.result.AccessToken;
+				const accessToken = data.result.AccessToken;
 
 				// 쿠키에 토큰 저장
 				// console.log(accessToken); -> 성공
