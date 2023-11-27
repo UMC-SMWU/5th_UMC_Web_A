@@ -51,7 +51,6 @@ export default App;
 const AppWrap = styled.div`
   width: 100vw;
   height: 100vh;
-
   .appContentWrap {
     left: 50%;
     top: 50%;
