@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as S from "./LoginPage.style";
 import { Input } from "../../components";
 import { login } from "../../api";
+import { setCookie } from "../../utils";
 
 const LoginPage = () => {
 	const [id, setId] = useState("");
@@ -44,6 +45,12 @@ const LoginPage = () => {
 		})
 			.then((response) => {
 				// 로그인 성공 시 처리
+
+				const accessToken = response.data.result.AccessToken;
+
+				// 쿠키에 토큰 저장
+				// console.log(accessToken); -> 성공
+				setCookie("token", accessToken);
 			})
 			.catch((error) => {
 				// API 에러 발생 시 서버에서 보내주는 error response에 있는 메시지를 alert으로 띄운다.
