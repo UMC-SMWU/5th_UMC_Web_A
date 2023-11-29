@@ -44,7 +44,13 @@ function Login() {
     };
 
     try {
-      await dispatch(loginUser(user));
+      const response = await dispatch(loginUser(user));
+
+      if (response && response.data.AccessToken) {
+        // 토큰이 있다면 로컬 스토리지에 저장
+        localStorage.setItem("token", response.data.AccessToken);
+      }
+
       setTimeout(() => {
         setLoading(false);
       }, 1500);
@@ -66,6 +72,7 @@ function Login() {
             value={email}
             onChange={handleEmailChange}
             onBlur={handleEmailBlur}
+            id="id"
           />
         </S.Label>
         {emailError && <S.ErrorMsg>{emailError}</S.ErrorMsg>}
@@ -79,6 +86,7 @@ function Login() {
             value={password}
             placeholder="비밀번호를 입력하세요"
             onChange={handlePasswordChange}
+            id="password"
           />
         </S.Label>
       </S.Form>
