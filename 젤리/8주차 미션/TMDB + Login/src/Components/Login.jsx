@@ -46,7 +46,6 @@ export default function Login() {
   const [isValidId, setValidId] = useState(false);
   const [pw, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [msg, setMsg] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -73,42 +72,38 @@ export default function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (isValidId) {
-      setMsg("Loading...");
-
-      try {
-        setLoading(true);
-        setTimeout(() => {
-          setMsg("");
-          setLoading(false);
-        }, 1500);
-
-        const response = await axios.post("http://localhost:8000/user/login", {
-          id,
-          pw,
-        });
-
-        dispatch(loginUser(response.data.result));
-      } catch (error) {
-        if (error.response) {
-          const code = error.response.status;
-          switch (code) {
-            case 400:
-              alert("비어있는 항목이 존재합니다");
-              break;
-            case 401:
-              alert("존재하지 않는 ID입니다");
-              break;
-            case 402:
-              alert("비밀번호가 틀렸습니다");
-              break;
-            default:
-              break;
-          }
+    let body = {
+      id,
+      pw,
+    };
+    try {
+      setLoading(true);
+      const response = await axios.post(
+        "http://localhost:8000/user/login",
+        body
+      );
+      dispatch(
+        loginUser({ type: "user/loginUser", payload: response.data.result })
+      );
+      navigate("/");
+    } catch (error) {
+      if (error.response) {
+        const code = error.response.status;
+        switch (code) {
+          case 400:
+            alert("비어있는 항목이 존재합니다");
+          case 401:
+            alert("존재하지 않는 ID입니다");
+          case 402:
+            alert("비밀번호가 틀렸습니다");
+          default:
+            break;
         }
-      } finally {
-        navigate("/");
       }
+    } finally {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1500);
     }
   };
 
@@ -137,6 +132,7 @@ export default function Login() {
           >
             확인
           </LogButton>
+          {loading && <div>Loading...</div>}
         </form>
       </div>
     </div>
